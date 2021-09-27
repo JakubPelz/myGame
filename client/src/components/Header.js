@@ -11,6 +11,9 @@ const Header = () => {
           <Link to="/informace" className="item">
               Návod
           </Link>
+          <Link to="/informace" className="item">
+              Registrace
+          </Link>
           <Link to="/" className="item">
               Přihlášení
           </Link>

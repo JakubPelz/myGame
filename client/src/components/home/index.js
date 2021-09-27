@@ -14,7 +14,7 @@ const Home = () => {
                     <div className="three wide column">
                         <LeftPanel />
                     </div>
-                    <div className="eleven wide column">
+                    <div className="ten wide column">
                         <Main />
                     </div>
                     <div className="two wide column">
