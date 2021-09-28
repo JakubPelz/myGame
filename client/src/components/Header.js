@@ -11,7 +11,7 @@ const Header = () => {
           <Link to="/informace" className="item">
               Návod
           </Link>
-          <Link to="/informace" className="item">
+          <Link to="/registrace" className="item">
               Registrace
           </Link>
           <Link to="/" className="item">

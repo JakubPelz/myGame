@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 //Import Routes
 const authRoute = require('./routes/authentication');
 const gameRoute = require('./routes/gameIndex');
+const usersRoute = require('./routes/get/getUsers');
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(express.json());
 
 app.use('/api/user', authRoute);
 app.use('/api/game', gameRoute);
+app.use('/', usersRoute);
 
 app.listen(PORT, (err) => {
     console.log(`Server is running on ${PORT}!`)
