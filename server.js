@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const dotenv = require('dotenv');
-const mongoose = require('mongoose');
+
 
 //Import Routes
 const authRoute = require('./routes/authentication');
@@ -11,12 +11,18 @@ const usersRoute = require('./routes/get/getUsers');
 
 dotenv.config();
 
-//Connect to database
-mongoose.connect(
-    process.env.DB_CONNECT,
-    { useNewUrlParser: true },
-    () => console.log('connect to DB!')
-);
+//Monogo
+
+const mongoose = require('mongoose');
+require("dotenv").config();
+
+mongoose
+.connect(
+    process.env.DB_CONNECT, 
+    {useNewUrlParser: true, useUnifiedTopology: true}
+)
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.log(err));
 
 //Middleware
 app.use(express.json());
@@ -30,4 +36,5 @@ app.use('/', usersRoute);
 
 app.listen(PORT, (err) => {
     console.log(`Server is running on ${PORT}!`)
+    
 })
