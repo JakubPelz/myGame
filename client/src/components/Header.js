@@ -1,22 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div className="ui secondary pointing menu">
-        <Link to="/" className="item">
+        <NavLink to="/" className="item">
             Fantasy text game
-        </Link>      
+        </NavLink>
+        <NavLink to="/inGame" className="item">
+            Přímo do hry (pracovní)
+        </NavLink>       
         <div className="right menu">
-          <Link to="/informace" className="item">
+          <NavLink to="/informace" className="item">
               Návod
-          </Link>
-          <Link to="/registrace" className="item">
+          </NavLink>
+          <NavLink to="/registrace" className="item">
               Registrace
-          </Link>
-          <Link to="/" className="item">
+          </NavLink>
+          <NavLink to="/" className="item">
               Přihlášení
-          </Link>
+          </NavLink>
         </div>
        </div>
   

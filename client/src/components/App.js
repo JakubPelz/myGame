@@ -6,6 +6,7 @@ import Registrace from './authentication/Registrace';
 //guide
 
 //inGame
+import inGame from './inGame/indexGame';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
                     <Route exact path="/informace" component={indexGuide} />
                     {/* InGame */}
                     <Route exact path="/registrace" component={Registrace} />
+                    <Route exact path="/inGame" component={inGame} />
                 </Switch>
             </Router>
         </div>
