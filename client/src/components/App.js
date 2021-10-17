@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './home/index';
 import indexGuide from './guide/indexGuide';
 import Registrace from './authentication/Registrace';
+import LogIn from './home/LogIn';
 //guide
 
 //inGame
@@ -20,6 +21,7 @@ const App = () => {
                     <Route exact path="/informace" component={indexGuide} />
                     {/* InGame */}
                     <Route exact path="/registrace" component={Registrace} />
+                    <Route exact path="/prihlaseni" component={LogIn} />
                     <Route exact path="/inGame" component={inGame} />
                 </Switch>
             </Router>

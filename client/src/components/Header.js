@@ -4,20 +4,20 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <div className="ui secondary pointing menu">
-        <NavLink to="/" className="item">
+        <NavLink exact to="/" className="item">
             Fantasy text game
         </NavLink>
-        <NavLink to="/inGame" className="item">
+        <NavLink exact to="/inGame" className="item">
             Přímo do hry (pracovní)
         </NavLink>       
         <div className="right menu">
-          <NavLink to="/informace" className="item">
+          <NavLink exact to="/informace" className="item">
               Návod
           </NavLink>
-          <NavLink to="/registrace" className="item">
+          <NavLink exact exact to="/registrace" className="item">
               Registrace
           </NavLink>
-          <NavLink to="/" className="item">
+          <NavLink to="/prihlaseni" className="item">
               Přihlášení
           </NavLink>
         </div>
