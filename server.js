@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const dotenv = require('dotenv');
+const cors = require('cors');
 
-
+//Cors
+app.use(cors());
 //Import Routes
 const authRoute = require('./routes/authentication');
 const gameRoute = require('./routes/gameIndex');

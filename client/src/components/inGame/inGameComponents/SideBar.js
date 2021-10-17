@@ -13,9 +13,9 @@ const SideBar = () => {
     
         return (
           <React.Fragment key={item.title}>
-            <a className={`item ${active}`} onClick={() => onTitleClick(index)}>
+            <div className={`item ${active}`} onClick={() => onTitleClick(index)}>
               {item.title}
-            </a>
+            </div>
           </React.Fragment>
         );
       });
@@ -29,4 +29,4 @@ const SideBar = () => {
     )
 }
 
-export default SideBar
+export default SideBar;
